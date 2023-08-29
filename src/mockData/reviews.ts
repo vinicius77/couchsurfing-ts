@@ -2,7 +2,7 @@ export type Review = {
   name: string;
   stars: number;
   loyaltyUser: boolean;
-  date: Date | string;
+  date: string;
 };
 
 const reviews: Review[] = [
