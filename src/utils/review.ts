@@ -1,12 +1,12 @@
-import { Review } from "../mockData/reviews";
+import { Loyality, Review } from "../mockData/reviews";
 import { sortReviewsByDate } from "./array";
 
 export function showReviewTotal(
   value: number,
   reviewer: string,
-  isLoyalty: boolean
+  isLoyalty: string
 ): string {
-  const iconDisplay = isLoyalty ? "⭐" : "";
+  const iconDisplay = isLoyalty === Loyality.GOLD_USER ? "⭐" : "";
   return `reviews: ${value.toString()} | last reviewed by ${reviewer} ${iconDisplay}`;
 }
 
