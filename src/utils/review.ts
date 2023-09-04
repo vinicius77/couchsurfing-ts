@@ -1,13 +1,20 @@
 import { Loyality, Review } from "../mockData/reviews";
 import { sortReviewsByDate } from "./array";
 
+export const makePlural = (value: number): string => {
+  if (value > 1 || value === 0) return "s";
+  return "";
+};
+
 export function showReviewTotal(
   value: number,
   reviewer: string,
   isLoyalty: Loyality
 ): string {
   const iconDisplay = isLoyalty === Loyality.GOLD_USER ? "⭐" : "";
-  return `reviews: ${value.toString()} | last reviewed by ${reviewer} ${iconDisplay}`;
+  return `Review${makePlural(
+    value
+  )}: ${value} | last reviewed by ${reviewer} ${iconDisplay}`;
 }
 
 export function getLatestReviewer(reviews: Review[]): Review {
