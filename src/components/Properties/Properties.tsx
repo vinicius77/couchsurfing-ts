@@ -6,8 +6,8 @@ const Properties = () => {
     <div>
       <h3>Other Properties recommended to you:</h3>
       <div className="flex">
-        {properties.map(({ image, title }) => (
-          <Card key={image} image={image} title={title} />
+        {properties.map(({ image, title, price }) => (
+          <Card key={image} image={image} title={title} price={price} />
         ))}
       </div>
     </div>

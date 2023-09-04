@@ -9,6 +9,7 @@ export type Review = {
   stars: number;
   loyaltyUser: Loyality;
   date: string;
+  description?: string;
 };
 
 const reviews: Review[] = [
@@ -17,6 +18,7 @@ const reviews: Review[] = [
     stars: 5,
     loyaltyUser: Loyality.GOLD_USER,
     date: "01-04-2021",
+    description: "Great hosts, location was a bit further than said",
   },
   {
     name: "Hanna",
