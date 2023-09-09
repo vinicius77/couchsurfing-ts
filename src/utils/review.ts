@@ -20,3 +20,8 @@ export function showReviewTotal(
 export function getLatestReviewer(reviews: Review[]): Review {
   return sortReviewsByDate(reviews)[0];
 }
+
+export function getTopTwoReviews(reviews: Review[]) {
+  const sortedReviews = reviews.sort((a, b) => b.stars - a.stars);
+  return sortedReviews.slice(0, 2);
+}

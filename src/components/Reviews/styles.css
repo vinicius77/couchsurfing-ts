@@ -1,0 +1,10 @@
+.reviews {
+  display: flex;
+  padding: 10px;
+}
+
+.divider {
+  height: 1px;
+  width: 90%;
+  background-color: coral;
+}
